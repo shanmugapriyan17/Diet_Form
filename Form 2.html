@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diet Analysis Report</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Diet Analysis Report</h1>
+
+    <form>
+      <!-- Personal Information Section -->
+
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required />
+
+        <span>Gender:</span><br />
+        <input type="radio" id="male" name="gender" value="Male" />
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label><br /><br />
+
+        <label for="activity">Activity Level:</label>
+        <select id="activity" name="activity">
+          <option value="">-- Select --</option>
+          <option value="Sedentary">Sedentary</option>
+          <option value="Lightly active">Lightly active</option>
+          <option value="Moderately active">Moderately active</option>
+          <option value="Very active">Very active</option>
+        </select>
+      </fieldset>
+
+      <!-- Food Intake Section -->
+
+      <fieldset>
+        <legend>Food Intake</legend>
+
+        <input type="checkbox" id="fruits" name="food" value="Fruits" />
+        <label for="fruits">Fruits</label><br />
+
+        <input type="checkbox" id="vegetables" name="food" value="Vegetables" />
+        <label for="vegetables">Vegetables</label><br />
+
+        <input type="checkbox" id="grains" name="food" value="Whole Grains" />
+        <label for="grains">Whole Grains</label><br />
+
+        <input type="checkbox" id="dairy" name="food" value="Dairy" />
+        <label for="dairy">Dairy</label><br />
+
+        <label for="protein">Time of Protein Intake:</label>
+        <input type="time" id="protein" name="proteinTime" />
+
+        <label for="notes">Additional Notes:</label>
+        <textarea id="notes" name="notes" rows="4" cols="40"></textarea>
+      </fieldset>
+
+      <!-- Calorie and Progress Section -->
+      <fieldset>
+        <legend>Daily Calorie Intake</legend>
+
+        <label for="calorie">Calories Consumed (out of 2000 kcal):</label>
+        <meter id="calorie" value="1500" min="0" max="2000">1500</meter>
+
+        <label for="progress">Diet Goal Completion:</label>
+        <progress id="progress" value="75" max="100">75%</progress>
+
+        <p>Current Weight: <strong>70 kg</strong></p>
+        <p>Target Weight: <strong>65 kg</strong></p>
+      </fieldset>
+
+      <!-- Diet Summary Table -->
+
+      <fieldset>
+        <legend>Diet Summary Table</legend>
+        <table>
+          <thead>
+            <tr>
+              <th>Meal</th>
+              <th>Food</th>
+              <th>Calories</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Breakfast</td>
+              <td>Oatmeal + Banana</td>
+              <td>350</td>
+            </tr>
+            <tr>
+              <td>Lunch</td>
+              <td>Grilled Chicken Salad</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Dinner</td>
+              <td>Rice + Vegetables</td>
+              <td>650</td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+
+      <!-- Submit Section -->
+
+      <fieldset>
+        <legend>Submit</legend>
+        <button type="submit">Submit Report</button>
+        <button type="reset">Reset</button>
+      </fieldset>
+    </form>
+
+    <section id="about">
+      <h2>About Myself</h2>
+
+      <div class="about-container">
+        <img
+          src="_MG_4317.JPG"
+          alt="Shanmugapriyan Profile Photo"
+          class="profile-pic"
+        />
+        <div class="about-text">
+          <p><strong>Name:</strong> Shanmugapriyan S</p>
+          <p><strong>Email:</strong> ranjithssp2003@gmail.com</p>
+          <p><strong>Phone:</strong> 9894982411</p>
+          <p>
+            I am an enthusiastic IT graduate from Government College of
+            Engineering, Erode. Passionate about software development,
+            especially in AI, blockchain, and web technologies. I love learning
+            new tech and building practical projects.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
