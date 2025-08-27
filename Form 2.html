@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Diet Analysis Report</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- icon -->
+
+    <link rel="icon" href="./IMG/apple.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zeyada&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="site">
+      <h1>DIET ANALYSIS REPORT</h1>
+
+      <form>
+        <!-- Personal Information Section -->
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <div class="row-2">
+            <div>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your name"
+              />
+            </div>
+            <div>
+              <label for="age">Age:</label>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                required
+                placeholder="Enter your age"
+              />
+            </div>
+          </div>
+
+          <!-- Gender -->
+          <label for="gender">Gender:</label>
+          <div class="inline-row" id="gender">
+            <label
+              ><input type="radio" id="male" name="gender" value="Male" />
+              Male</label
+            >
+            <label
+              ><input type="radio" id="female" name="gender" value="Female" />
+              Female</label
+            >
+          </div>
+
+          <label for="activity">Activity Level:</label>
+          <div class="select-wrap">
+            <select id="activity" name="activity">
+              <option value="">-- Select --</option>
+              <option value="Sedentary">Sedentary</option>
+              <option value="Lightly active">Lightly active</option>
+              <option value="Moderately active">Moderately active</option>
+              <option value="Very active">Very active</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Food Intake Section -->
+        <fieldset>
+          <legend>Food Intake</legend>
+          <div class="inline-row">
+            <label
+              ><input type="checkbox" id="fruits" name="food" value="Fruits" />
+              Fruits</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                id="vegetables"
+                name="food"
+                value="Vegetables"
+              />
+              Vegetables</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                id="grains"
+                name="food"
+                value="Whole Grains"
+              />
+              Whole Grains</label
+            >
+            <label
+              ><input type="checkbox" id="dairy" name="food" value="Dairy" />
+              Dairy</label
+            >
+          </div>
+
+          <div class="stack-12">
+            <div>
+              <label for="protein">Time of Protein Intake:</label>
+              <input type="time" id="protein" name="proteinTime" />
+            </div>
+            <div>
+              <label for="notes">Additional Notes:</label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                cols="40"
+                placeholder="Add any extra details..."
+              ></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Calorie and Progress Section -->
+        <fieldset>
+          <legend>Daily Calorie Intake</legend>
+
+          <label for="calorie">Calories Consumed (out of 2000 kcal):</label>
+          <meter id="calorie" value="1500" min="0" max="2000">1500</meter>
+
+          <label for="progress">Diet Goal Completion:</label>
+          <progress id="progress" value="75" max="100">75%</progress>
+
+          <p style="color: var(--muted); margin-top: 6px">
+            Current Weight: <strong>70 kg</strong>
+          </p>
+          <p style="color: var(--muted)">
+            Target Weight: <strong>65 kg</strong>
+          </p>
+        </fieldset>
+
+        <!-- Diet Summary Table -->
+        <fieldset>
+          <legend>Diet Summary Table</legend>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Meal</th>
+                  <th>Food</th>
+                  <th>Calories</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Breakfast</td>
+                  <td>Oatmeal + Banana</td>
+                  <td>350</td>
+                </tr>
+                <tr>
+                  <td>Lunch</td>
+                  <td>Grilled Chicken Salad</td>
+                  <td>500</td>
+                </tr>
+                <tr>
+                  <td>Dinner</td>
+                  <td>Rice + Vegetables</td>
+                  <td>650</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </fieldset>
+
+        <!-- Submit Buttons -->
+        <div class="btns">
+          <button type="submit">Submit Report</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Myself</h2>
+        <div class="about-container">
+          <img
+            src="./IMG/_MG_4317.JPG"
+            alt="Shanmugapriyan Profile Photo"
+            class="profile-pic"
+          />
+          <div class="about-text">
+            <p><strong>Name:</strong> Shanmugapriyan S</p>
+            <p><strong>Email:</strong> ranjithssp2003@gmail.com</p>
+            <p><strong>Phone:</strong> 9894982411</p>
+            <p>
+              I am an enthusiastic IT graduate from Government College of
+              Engineering, Erode. Passionate about software development,
+              especially in AI, blockchain, and web technologies. I love
+              learning new tech and building practical projects.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
